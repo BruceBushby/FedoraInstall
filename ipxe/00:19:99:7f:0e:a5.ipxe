@@ -3,6 +3,6 @@
 set base http://dl.fedoraproject.org/pub/fedora/linux/releases/17/Fedora/x86_64/os
 
 kernel ${base}/isolinux/vmlinuz
-imgargs vmlinuz  ip=88.208.234.11::88.208.232.1:255.255.252.0:vplxweb01:em1:none nameserver=8.8.4.4 lang=  kssendmac ks=http://80.1.107.227:3000/f18ks repo=${base} ksdevice=em1 em1_ethtool="autoneg off speed 100 duplex full"
+imgargs vmlinuz  ip=88.208.234.11::88.208.232.1:255.255.252.0:vplxweb01:em1:none nameserver=8.8.4.4 lang=  kssendmac ks=http://raw.github.com/BruceBushby/FedoraInstall/master/ks/00:19:99:7f:0e:a5.ks repo=${base} ksdevice=em1 em1_ethtool="autoneg off speed 100 duplex full"
 initrd ${base}/isolinux/initrd.img
 boot 
