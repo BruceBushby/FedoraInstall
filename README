@@ -1,5 +1,23 @@
 
-Attempts to host/serv ipxe "chain" and kickstart files as a means of
-version control and http availability.
+Fedora Install
+-------------------------------
+
+25/01/2013: Create initial repo (Bruce Bushby)
+
+I use this repo to maintain my "ipxe chain" and Fedora "kickstart" scripts.
+
+Github is a handy solution for IPXE remote server installs. It provides version control as well as http "hosting". 
+
+My IPXE.iso image "chainloads" the following url: 
+chain http://raw.github.com/BruceBushby/FedoraInstall/master/ipxe/${mac}.ipxe
 
 
+
+To do:
+-------------------------------
+
+Try and replace this line:
+imgargs vmlinuz  ip=88.208.234.11::88.208.232.1:255.255.252.0:vplxweb01:em1:none nameserver=8.8.4.4
+
+With:
+imgargs vmlinuz  ip=${ip}::${route}:$mac}:vplxweb01:em1:none nameserver=${dns}
