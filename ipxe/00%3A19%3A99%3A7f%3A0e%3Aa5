@@ -1,1 +1,8 @@
-vplxweb01.ipxe
+#!ipxe
+#
+set base http://dl.fedoraproject.org/pub/fedora/linux/releases/17/Fedora/x86_64/os
+
+kernel ${base}/isolinux/vmlinuz
+imgargs vmlinuz  ip=88.208.234.11::88.208.232.1:255.255.252.0:vplxweb01:em1:none nameserver=8.8.4.4 lang=  kssendmac ks=http://raw.github.com/BruceBushby/FedoraInstall/master/ks/vplxweb01.ks repo=${base} ksdevice=em1 em1_ethtool="autoneg off speed 100 duplex full"
+initrd ${base}/isolinux/initrd.img
+boot 
